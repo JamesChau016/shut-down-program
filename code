@@ -1,0 +1,12 @@
+import os
+import time
+if __name__== '__main__':
+    s=input("When do you want to shutdown?: (Hour Minute ex:20 23)")
+    while True:
+        local = time.strftime("%H %M")
+        tts = local[3:]
+        if (local==s):
+            os.system("shutdown /s")
+            print("shutting down")
+            exit()
+        time.sleep(60)
